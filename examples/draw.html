@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../js/rpcdraw.js"></script>
+  <script>
+  window.onload = function () {
+    init();
+  }
+  </script>
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+  <style>
+* { padding: 0; margin: 0; }
+html, body, #fullheight {
+	    min-height: 100% !important;
+		        height: 100%;
+}
+  #toolbar {
+	  overflow-y: scroll;
+	  width: 100%;
+		  height: 20%;
+  }
+  
+  #canvas {
+    width: 100%;
+    height: 80%;
+  }
+  canvas {
+    margin: 0 auto;
+    border: solid black 1px;
+  }
+  ul > li {
+    display: inline-block;
+    border: outset black 3px;
+  }
+  li > a {
+    display: inline-block;
+    height: 3em;
+    width: 3em;
+  }
+* {
+	box-sizing: border-box;
+	border: dotted red 1px;
+}
+  </style>
+</head>
+<body>
+	<div id="toolbar">
+  <a href="#" onclick="window.history.back()">&lt;&lt;Back</a>&nbsp;
+  <div>
+    <p>Draw below. You can save using your browser.<i> Desktop: right click, Save Image As. Mobile: Long click, go to Save.</i></p>
+  </div>
+  <div>
+    <ul>
+      <li>
+        <a onclick="clearCanvas(true); return false;">Clear</a>
+      </li>
+      <li style="background-color: black;"
+        onclick="setColor(this.style.backgroundColor); return false;" >
+        <a>&nbsp</a>
+      </li>
+      <li style="background-color: grey;"
+        onclick="setColor(this.style.backgroundColor); return false;" >
+        <a>&nbsp</a>
+      </li>
+      <li style="background-color: white;"
+        onclick="setColor(this.style.backgroundColor); return false;" >
+        <a>&nbsp</a>
+      </li>
+      <li style="background-color: blue;"
+        onclick="setColor(this.style.backgroundColor); return false;" >
+        <a>&nbsp</a>
+      </li>
+      <li style="background-color: green;"
+        onclick="setColor(this.style.backgroundColor); return false;" >
+        <a>&nbsp</a>
+      </li>
+      <li style="background-color: yellow;"
+        onclick="setColor(this.style.backgroundColor); return false;" >
+        <a>&nbsp</a>
+      </li>
+      <li style="background-color: red;"
+        onclick="setColor(this.style.backgroundColor); return false;" >
+        <a>&nbsp</a>
+      </li>
+      <li
+        onclick="width = 1; return false;" >
+        <a>Thin</a>
+      </li>
+      <li
+        onclick="width = 10; return false;" >
+        <a>Thick</a>
+      </li>
+    </ul>
+  </div>
+	</div>
+  <div id="canvas">
+  </div>
+</body>
+</html>
